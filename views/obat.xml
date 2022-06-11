@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- obat.apotek tree view -->
+    <record id="obat_apotek_view_tree" model="ir.ui.view">
+        <field name="name">Obat</field>
+        <field name="model">obat.apotek</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="id_obat"/>
+                <field name="pembuat_obat"/>
+                <field name="stok_obat"/>
+                <field name="comment_stok"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- obat.apotek form view -->
+    <record id="obat_apotek_view_form" model="ir.ui.view">
+        <field name="name">Daftar Obat</field>
+        <field name="model">obat.apotek</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="id_obat"/>
+                        <field name="pembuat_obat"/>
+                        <field name="stok_obat"/>
+                        <field name="comment_stok"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- obat.apotek action window -->
+    <record id="obat_apotek_action" model="ir.actions.act_window">
+        <field name="name">Kumpulan Obat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">obat.apotek</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="obat_apotek_menu_act"
+              name="Daftar Obat"
+              parent="obat_apotek_menu_categ"
+              action="obat_apotek_action" 
+              sequence="20"/>
+</odoo>

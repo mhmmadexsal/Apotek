@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- transaksi.apotek tree view -->
+    <record id="transaksi_apotek_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Transaksi</field>
+        <field name="model">transaksi.apotek</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="id_transaksi"/>
+                <field name="id_pasien"/>
+                <field name="id_obat"/>
+                <field name="jml_transaksi"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- transaksi.apotek form view -->
+    <record id="transaksi_apotek_view_form" model="ir.ui.view">
+        <field name="name">Daftar Transaksi</field>
+        <field name="model">transaksi.apotek</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="id_transaksi"/>
+                        <field name="id_pasien"/>
+                        <field name="id_obat"/>
+                        <field name="jml_transaksi"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- transaksi.apotek action window -->
+    <record id="transaksi_apotek_action" model="ir.actions.act_window">
+        <field name="name">Daftar Transaksi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">transaksi.apotek</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="transaksi_apotek_menu_act"
+              name="Daftar Transaksi" 
+              parent="transaksi_apotek_menu_categ" 
+              action="transaksi_apotek_action" 
+              sequence="20"/>
+</odoo>

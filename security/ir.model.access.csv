@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_obat_apotek,access.obat_apotek,model_obat_apotek,,1,1,1,1
+access_transaksi_apotek,access.transaksi_apotek,model_transaksi_apotek,,1,1,1,1
+access_pasien_apotek,access.pasien_apotek,model_pasien_apotek,,1,1,1,1

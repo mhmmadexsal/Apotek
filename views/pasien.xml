@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- pasien.apotek tree view -->
+    <record id="pasien_apotek_view_tree" model="ir.ui.view">
+        <field name="name">Pasien</field>
+        <field name="model">pasien.apotek</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="id_pasien"/>
+                <field name="nama_pasien"/>
+                <field name="ttl_pasien"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- pasien.apotek form view -->
+    <record id="pasien_apotek_view_form" model="ir.ui.view">
+        <field name="name">Daftar Pasien</field>
+        <field name="model">pasien.apotek</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="id_pasien"/>
+                        <field name="nama_pasien"/>
+                        <field name="ttl_pasien"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- pasien.apotek action window -->
+    <record id="pasien_apotek_action" model="ir.actions.act_window">
+        <field name="name">Daftar Pasien</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">pasien.apotek</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="pasien_apotek_menu_act" 
+              name="Daftar Pasien" 
+              parent="pasien_apotek_menu_categ" 
+              action="pasien_apotek_action" 
+              sequence="20"/>
+</odoo>
